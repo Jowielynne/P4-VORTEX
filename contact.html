@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>| Contact</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="./assets/vortex.log">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="first__nav">
+                <a href="./index.html">
+                    <img src="./assets/vortex.log" alt="">
+                </a>
+            </div>
+            <div class="end__nav">
+                <div class="searchbar">
+                    <input placeholder="Search..." id="searchBar" name="searchBar" type="text">
+                </div>
+                <a href="./user.html">
+                    <img src="./assets/user.png" alt="#">
+                </a>
+                <div class="cart__effect">
+                    <a href="./cart.html">
+                        <img src="./assets/cart.png" alt="#" class="cart">
+                        <img src="./assets/cart_hover.png" alt="" class="cart__hov">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="contact__container">
+        <div class="title">
+            <h1>CONTACT</h1>
+        </div>
+
+        <div class="contact__form">
+            <div class="form-container">
+
+                <input placeholder="Name User*" id="name" type="text" required>
+                <input placeholder="e-mail user*" id="name" type="text" required>
+                <textarea id="message" placeholder="message*" name="message" rows="4" required></textarea>
+                <form action="/submit_form" method="post">
+                    <button type="submit" class="contact__button">Submit</button>
+                </form>
+            </div>
+            <div class="social-media">
+                <div class="icons">
+                    <a href="#"><img src="./assets/insta.png" alt="Instagram"></a>
+                    <a href="#"><img src="./assets/tiktok.png" alt="TikTok"></a>
+                    <a href="#"><img src="./assets/x.png" alt="X"></a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p class="footer__text">©COPYRIGHT VORTEX</p>
+        <a href="./contact.html">contact | help </a>
+    </footer>
+    <script src="./app.js"></script>
+</body>
+
+</html>

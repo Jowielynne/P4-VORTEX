@@ -1,0 +1,918 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    position: relative;
+    background-color: black;
+    max-width: 100vw;
+    overflow-x: hidden;
+    animation: transitionIn 0.6s;
+}
+
+
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes transitionOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: Bebas;
+}
+
+button {
+    font-family: Vietnam;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 50px;
+    transition: 0.4s;
+}
+
+button:hover {
+    background-color: #3e3e3e;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+p {
+    font-family: Vietnam;
+}
+
+
+
+@font-face {
+    font-family: Bebas;
+    src: url(./fonts/BebasNeue-Regular.ttf);
+}
+
+@font-face {
+    font-family: Ace;
+    src: url(./fonts/animeace2_reg.ttf);
+}
+
+@font-face {
+    font-family: Vietnam;
+    src: url(./fonts/BeVietnamPro-Thin.ttf)
+}
+
+
+/* MENU - SIDEBAR. */
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    height: 10vh;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+}
+
+nav img {
+    height: 2em;
+    margin-left: 20px;
+}
+
+.end__nav {
+    display: flex;
+    flex-direction: row;
+    margin-left: 62vw;
+}
+
+.first__nav img {
+    margin-top: 10px;
+    height: 150px;
+}
+
+.cart__effect {
+    position: relative;
+    max-width: 100%;
+}
+
+.cart__effect img.cart__hov {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+.cart__effect:hover img.cart__hov {
+    opacity: 1;
+}
+
+/* BUTTONS, BACK/NEXT. */
+
+/* SEARCHBAR */
+input {
+    border: none;
+    border-radius: 50px;
+    padding: 6px 10px;
+    font-family: Ace;
+    color: black;
+}
+
+
+/* (1) HOMEPAGE. */
+.homepage__container {
+    min-height: 100vh;
+    width: 100%;
+    background-color: white;
+}
+
+/* (1.2) IMAGE CAROUSEL. */
+.carousel {
+    width: 100%;
+    position: relative;
+}
+
+.carousel>ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    position: relative;
+    height: 100%;
+}
+
+.slide {
+    margin-top: 4.72rem;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 200ms opacity ease-in-out;
+}
+
+.slide[data-active] {
+    opacity: 1;
+}
+
+.slide>img {
+    display: block;
+    width: 100%;
+    object-position: center;
+}
+
+.carousel-button {
+    position: absolute;
+    z-index: 2;
+    background: none;
+    border: none;
+    top: 31vh;
+    transform: translateY(-50%);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.carousel-button:hover {
+    text-shadow: 0px 0px 10px white;
+}
+
+.carousel-button.prev {
+    left: 2rem;
+}
+
+.carousel-button.next {
+    right: 2rem;
+}
+
+/* (1.3) CONTENT, MANGA BOXES. */
+.display__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+
+}
+
+.display__container h1 {
+    margin: 10vh 0px 0px 6rem;
+    font-size: 60px;
+    font-weight: bolder;
+    letter-spacing: 10px;
+}
+
+.title__container {
+    display: flex;
+    flex-direction: row;
+}
+
+.line {
+    width: 67vw;
+    height: 0px;
+    left: 27vw;
+    top: 61vh;
+    position: absolute;
+    border: 1px black solid;
+}
+
+.display__container .line__second {
+    width: 67vw;
+    height: 0px;
+    left: 27vw;
+    top: 145vh;
+    position: absolute;
+    border: 1px black solid;
+}
+
+.word__wrap {
+    width: 1vw;
+}
+
+.word__wrap h1 {
+    margin: 55vh 0px 0px 6rem;
+    font-size: 60px;
+    font-weight: bolder;
+    letter-spacing: 10px;
+    line-height: 4vw;
+    color: black;
+
+}
+
+.manga__release {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 2vw;
+    width: 100%;
+}
+
+.manga__release img {
+    height: 325px;
+    margin: 0px 32px;
+    transition: 0.3s;
+}
+
+.manga__popular {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 2vw;
+    width: 100%;
+}
+
+.manga__popular img {
+    height: 325px;
+    margin: 0px 32px 15rem;
+    transition: 0.4s;
+}
+
+.more__button {
+    margin: 50px 0px 0px 84vw;
+}
+
+.more__button2 {
+    position: absolute;
+    top: 205vh;
+    left: 84vw;
+}
+
+/* (1.4 MANGA HOVERS) */
+.manga__box {
+    position: relative;
+    font-family: Bebas;
+}
+
+.image {
+    opacity: 1;
+    display: block;
+    height: auto;
+    transition: .3s ease;
+    backface-visibility: hidden;
+}
+
+.middle {
+    transition: .4s ease;
+    opacity: 0;
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.middle2 {
+    transition: 0.4s ease;
+    opacity: 0;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.manga__box:hover .image {
+    opacity: 0.3;
+    filter: grayscale(100%);
+    padding: 1rem 1rem;
+    border: 1px solid black;
+}
+
+.manga__box:hover .view {
+    padding: 16px 4rem;
+}
+
+.manga__box:hover .middle {
+    opacity: 1;
+    padding: 16px 4rem;
+}
+
+.manga__box:hover .middle2 {
+    opacity: 1;
+    padding: 16px 4rem;
+}
+
+
+.view {
+    background-color: #000000;
+    color: white;
+    font-size: 20px;
+    padding: 16px 1rem;
+    transition: 0.4s;
+}
+
+/* (2) MANGA DISPLAY PAGE.*/
+.manga__container {
+    padding-top: 4.5rem;
+    min-height: 100vh;
+    max-width: 100vw;
+    background-color: white;
+}
+
+.manga__container h2 {
+    position: absolute;
+    top: 24vh;
+    font-size: 60px;
+    font-weight: 100;
+    letter-spacing: 5px;
+}
+
+.manga__container h3 {
+    position: absolute;
+    top: 32vh;
+    font-size: 35px;
+    font-weight: 100;
+    letter-spacing: 5px;
+}
+
+.manga__container h4 {
+    font-size: 3cqh;
+    font-weight: 100;
+}
+
+.manga__container .line__two {
+    top: 39vh;
+}
+
+.manga__container .text {
+    position: absolute;
+    top: 41vh;
+}
+
+.manga__container p {
+    font-size: 14px;
+    margin-right: 19vw;
+}
+
+.buttons__manga {
+    margin-top: 0px;
+}
+
+.manga__price {
+    font-family: Bebas;
+}
+
+h5 {
+    margin-top: 30px;
+    font-size: 33px;
+}
+
+.manga__information {
+    display: flex;
+    margin: 0px 20vw;
+    align-items: center;
+    flex-direction: row;
+}
+
+
+.manga__information img {
+    box-shadow: -20px -20px 0px 0px rgba(32, 14, 14, 0.25), -12px 12px 10px 0px rgba(0, 0, 0, 0.31);
+}
+
+
+.manga__favorites img {
+    height: 7.5rem;
+    box-shadow: none;
+}
+
+
+/* (2.2) MANGA BOX, FOR YOU. */
+/* (2.3) BUTTONS. */
+
+/*(3) SHOPPING CART. */
+.cart__container {
+    padding-top: 4.5rem;
+    min-height: 100vh;
+    width: 100%;
+    background-color: white;
+}
+
+.shopping__overview {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* (3.2) PRODUCT DISPLAY. */
+.cards {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    height: 80.5vh;
+    margin-bottom: 85px;
+    overflow: scroll;
+}
+
+.product__card {
+    display: flex;
+    flex-direction: row;
+    background-color: #F6F6F6;
+    margin: 10px 0px 0px 0px;
+    padding: 10px 10px 15px 15px;
+    width: 40vw;
+}
+
+.product__information {
+    margin: 10px 0px 0px 20px;
+}
+
+.product__information h2,
+h3,
+h4 {
+    font-weight: 100;
+}
+
+.product__card img {
+    height: 7rem;
+    box-shadow: -7px 7px 0px white;
+}
+
+/* (3.3) ORDER OVERVIEW. */
+.product__overview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40vw;
+    height: 79vh;
+    background-color: #F6F6F6;
+    margin: 10px;
+}
+
+.title__overview {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.title__overview h2 {
+    position: absolute;
+    top: 23vh;
+    font-size: 45px;
+    font-weight: 100;
+    letter-spacing: 4px;
+    margin-top: 1.5rem;
+}
+
+.title__overview .line {
+    position: absolute;
+    top: 30vh;
+    left: 53vw;
+    width: 80px;
+}
+
+.title__overview .line__two {
+    position: absolute;
+    top: 30vh;
+    left: 81.5vw;
+    width: 80px;
+}
+
+.card__information {
+    margin-left: 1rem;
+    position: absolute;
+    top: 40vh;
+}
+
+.buyer__information {
+    background-color: #EBEBEB;
+    margin: 10px 30px;
+    padding: 10px 20px;
+    width: 100%;
+    letter-spacing: 3px;
+}
+
+.buyer__information p {
+    font-family: Bebas;
+    font-size: 30px;
+}
+
+.submit__button {
+    position: absolute;
+    top: 90vh;
+    left: 53vw;
+    background-color: #000000;
+    padding: 10px 20px;
+    width: 35vw;
+    letter-spacing: 3px;
+}
+
+.submit__button p {
+    text-align: center;
+    font-family: Bebas;
+    font-size: 30px;
+    color: white;
+}
+
+.price p {
+    position: absolute;
+    left: 79vw;
+    bottom: 36vh;
+    width: 100%;
+    font-family: Bebas;
+    font-size: 30px
+}
+
+.line3 {
+    width: 23vw;
+    height: 0px;
+    left: 53.3vw;
+    top: 75vh;
+    position: absolute;
+    border: 1px black solid;
+}
+
+
+/* (4) USER PROFILE. */
+.profile__container {
+    padding-top: 4.5rem;
+    min-height: 100vh;
+    max-width: 100vw;
+    background-color: white;
+}
+
+.line__two {
+    width: 35vw;
+    height: 0px;
+    left: 44vw;
+    top: 37vh;
+    position: absolute;
+    border: 1px black solid;
+}
+
+.buttons {
+    position: absolute;
+    top: 40vh;
+    left: 63vw;
+}
+
+.title {
+    background-image: url('./assets/banner.png');
+    color: white;
+    font-size: 30px;
+    letter-spacing: 10px;
+    padding: 10px 10px 10px 40px;
+}
+
+.user__information {
+    display: flex;
+    margin: 0px 20vw;
+    align-items: center;
+    flex-direction: row;
+}
+
+.user__information img {
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.485);
+}
+
+.img {
+    height: 28rem;
+    margin: 35px 65px 0px 0px;
+}
+
+.personal__info h2 {
+    font-size: 60px;
+    font-weight: 100;
+    letter-spacing: 10px;
+    margin-bottom: 45vh;
+}
+
+.text {
+    position: absolute;
+    top: 44vh;
+}
+
+.personal__info p {
+    font-weight: 900;
+    font-size: 13px;
+}
+
+.personal__info h3 {
+    font-size: 30px;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+
+.personal__info img {
+    height: 7.5rem;
+    box-shadow: none;
+}
+
+.manga__favorites {
+    position: absolute;
+    top: 64vh;
+}
+
+/* (5) ADMIN PAGE. */
+.admin__container {
+    padding-top: 4.5rem;
+    min-height: 100vh;
+    max-width: 100vw;
+    background-color: white;
+}
+
+/* (5.2) PRODUCT OVERVIEW. */
+/* ((5.3) ADD SECTION. */
+
+/* (6) CONTACT PAGE. */
+.contact__container {
+    justify-content: center;
+    padding-top: 4.5rem;
+    min-height: 100vh;
+    max-width: 100vw;
+    background-color: white;
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.form-container {
+    background-image: url(./assets/bg\ contact.png);
+    background-position: center;
+    background-size: cover;
+    padding: 20px;
+    width: 40vw;
+    height: 60vh;
+    border: 5px solid #000;
+    margin-right: 300px;
+    font-family: Ace;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-container input {
+    border-radius: 0px;
+    width: 37vw;
+    height: 3rem;
+}
+
+textarea {
+    width: 37vw;
+    height: 14rem;
+}
+
+
+.form-container input,
+textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #000000;
+    font-family: Ace;
+}
+
+.contact__button {
+    margin: auto;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    color: #000000;
+    cursor: pointer;
+    width: 30vw;
+    border-radius: 0px;
+    font-family: Ace;
+    font-weight: 100;
+    font-size: 13px;
+}
+
+.social-media {
+    position: absolute;
+    text-align: center;
+    background: url('./assets/follow.png') no-repeat center;
+    background-size: contain;
+    top: 29vh;
+    left: 52vw;
+    width: 500px;
+    height: 400px;
+}
+
+.social-media p {
+    font-weight: bold;
+    margin-top: 120px;
+    /* Adjust to center the text vertically */
+    margin-bottom: 10px;
+}
+
+.icons {
+    display: flex;
+    position: absolute;
+    top: 31vh;
+    left: 12.5vw;
+    gap: 10px;
+}
+
+.icons img {
+    width: 30px;
+    height: 30px;
+}
+
+/* OVERVIEW CONTAINER. */
+.overview__container {
+    padding: 4.5rem 0px 7rem 0px;
+    min-height: 100vh;
+    max-width: 100vw;
+    background-color: white;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 20px 0px 0px 30px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #909090;
+    z-index: 1;
+    column-gap: 0px;
+    column-count: 4; /* Set the column count to 4 */
+}
+
+span {
+    font-family: Bebas;
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 16px;
+    font-size: 25px;
+    width: 11rem;
+    text-decoration: none;
+    display: block;
+    background-color: #d2d2d2;
+    font-family: Bebas;
+    border-bottom: black 1px solid;
+    border-right: rgba(0, 0, 0, 0.16) 1px solid;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: black;
+    color: white;
+}
+
+
+.box__title,
+.box__title2 {
+    display: flex;
+    flex-direction: row;
+    font-family: Bebas;
+    font-size: 40px;
+    letter-spacing: 5px;
+    margin: 20px 0px 0px 30px;
+}
+
+.box__title2 {
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: end;
+    margin-right: 20px;
+}
+
+.volumes {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    scrollbar-width: none;
+    overflow: scroll;
+
+}
+
+.line__box {
+    margin: 4vh 0px 0px 40px;
+    width: 67vw;
+    height: 0px;
+    border: 1px black solid;
+}
+
+.box__title2 .line__box {
+    margin: auto;
+}
+
+
+.volumes img {
+    height: 200px;
+    margin: 20px 25px;
+    transition: 0.3s;
+}
+
+.manga__volumes .view {
+    padding: 10px 0.5rem;
+}
+
+.manga__volumes .manga__box:hover .view {
+    padding: 10px 2rem;
+}
+
+.manga__volumes .manga__box:hover .middle {
+    opacity: 1;
+    padding: 10px 1rem;
+}
+
+
+
+
+
+/* FOOTER. */
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    height: 10vh;
+    width: 100vw;
+    background-color: black;
+    color: white;
+    align-items: center;
+    font-family: Ace;
+}
+
+footer a {
+    color: white;
+}
+
+.footer__text {
+    font-family: Ace;
+}

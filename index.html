@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>| Vortex</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="./assets/vortex.log">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="first__nav">
+                <a href="./index.html">
+                    <img src="./assets/vortex.log" alt="">
+                </a>
+            </div>
+            <div class="end__nav">
+                <div class="searchbar">
+                    <input placeholder="Search..." id="searchBar" name="searchBar" type="text">
+                </div>
+                <a href="./user.html">
+                    <img src="./assets/user.png" alt="#">
+                </a>
+                <div class="cart__effect">
+                    <a href="./cart.html">
+                        <img src="./assets/cart.png" alt="#" class="cart">
+                        <img src="./assets/cart_hover.png" alt="" class="cart__hov">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="homepage__container">
+        <section aria-label="Newest Photos">
+            <div class="carousel" data-carousel>
+                <button class="carousel-button prev" data-carousel-button="prev"><img src="./assets/left.svg"
+                        alt=""></button>
+                <button class="carousel-button next" data-carousel-button="next"><img src="./assets/right.svg"
+                        alt=""></button>
+                <ul data-slides>
+                    <li class="slide" data-active>
+                        <img src="./assets/BlueLock.png" alt="Blue Lock">
+                    </li>
+                    <li class="slide">
+                        <img src="./assets/Jujutsu Kaisen.png" alt="Jujutsu Kaisen">
+                    </li>
+                    <li class="slide">
+                        <img src="./assets/DemonSlayer.png" alt="Demon Slayer">
+                    </li>
+                    <li class="slide">
+                        <img src="./assets/BlackClover.png" alt="Black Clover">
+                    </li>
+                    <li class="slide">
+                        <img src="./assets/Chainsaw Man.png" alt="">
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="display__container">
+            <article class="title__container">
+                <div class="word__wrap">
+                    <h1>NEW RELEASES</h1>
+                </div>
+                <div class="line"></div>
+            </article>
+            <article class="manga__release">
+                <div class="manga__box">
+                    <a href="./manga.html">
+                        <img src="./assets/kaiju-no-8-vol-10-9781974746996_hr.jpg
+                " alt="" class="image">
+                        <div class="middle">
+                            <div class="view">VIEW</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="manga__box">
+                    <a href="./manga.html">
+                        <img src="./assets/1974745872.jpg" alt="" class="image">
+                        <div class="middle">
+                            <div class="view">VIEW</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="manga__box">
+                    <a href="./manga.html">
+                        <img src="./assets/1974745929.jpg" alt="" class="image">
+                        <div class="middle">
+                            <div class="view">VIEW</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="manga__box">
+                    <a href="./manga.html">
+                        <img src="./assets/197474583X.jpg" alt="" class="image">
+                        <div class="middle">
+                            <div class="view">VIEW</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="manga__box">
+                    <a href="./manga.html">
+                        <img src="./assets/mha 38.jpg" alt="" class="image">
+                        <div class="middle">
+                            <div class="view">VIEW</div>
+                        </div>
+                    </a>
+                </div>
+            </article>
+            <div class="more__button">
+                <a href="./overview.html">
+                    <img src="./assets/more.png" alt="">
+                </a>
+            </div>
+        </section>
+
+        <section class="display__container">
+            <article class="title__container">
+                <h1>TRENDING</h1>
+                <div class="line__second"></div>
+            </article>
+            <article class="manga__popular">
+                <div class="manga__box">
+                    <a href="./manga.html">
+                        <img src="./assets/550x783.jpg" alt="" class="image">
+                        <div class="middle2">
+                            <div class="view">VIEW</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="manga__box">
+                    <a href="./manga.html">
+                        <img src="./assets/jjjk22.jpg" alt="" class="image">
+                        <div class="middle2">
+                            <div class="view">VIEW</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="manga__box">
+                    <a href="./manga.html">
+                        <img src="./assets/550x825.jpg" alt="" class="image">
+                        <div class="middle2">
+                            <div class="view">VIEW</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="manga__box">
+                    <a href="./manga.html">
+                        <img src="./assets/black-clover-vol-1.jpg" alt="" class="image">
+                        <div class="middle2">
+                            <div class="view">VIEW</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="manga__box">
+                    <a href="./manga.html">
+                        <img src="./assets/cm 12.jpg" alt="" class="image">
+                        <div class="middle2">
+                            <div class="view">VIEW</div>
+                        </div>
+                    </a>
+                </div>
+            </article>
+            <div class="more__button2">
+                <a href="./overview.html">
+                    <img src="./assets/more.png" alt="">
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p class="footer__text">©COPYRIGHT VORTEX</p>
+        <a href="./contact.html">contact | help </a>
+    </footer>
+    <script src="./app.js"></script>
+</body>
+
+</html>
